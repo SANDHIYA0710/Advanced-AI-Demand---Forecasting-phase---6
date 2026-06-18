@@ -1,304 +1,457 @@
+# ForecastIQ Enterprise v6.0
 
-# # ForecastNova Phase 6
+### AI-Powered Demand Forecasting, Business Intelligence & Enterprise Decision Platform
 
-Enterprise AI-Based Demand Forecasting and Business Intelligence Platform
-
-## Introduction
-
-# ForecastNova Phase 6 is a modern full-stack demand forecasting platform designed for enterprises to analyze historical sales data, generate predictive insights, monitor anomalies, and automate forecasting workflows.
-
-The platform combines machine learning models, advanced analytics, real-time dashboards, and intelligent automation to help organizations improve inventory planning, optimize operations, and support data-driven decision making.
-
----
-
-# Core Features
-
-* AI-powered demand forecasting
-* Multi-model forecasting comparison
-* Interactive analytics dashboards
-* Automated forecasting schedules
-* Inventory optimization recommendations
-* Sales anomaly detection
-* Real-time monitoring and reporting
-* Forecast collaboration workspaces
-* Business scenario simulation
-* Webhook and API integrations
-* Enterprise authentication and authorization
+![Version](https://img.shields.io/badge/version-v6.0-orange)
+![Backend](https://img.shields.io/badge/backend-FastAPI-green)
+![Frontend](https://img.shields.io/badge/frontend-React%2018-blue)
+![Database](https://img.shields.io/badge/database-MySQL-orange)
+![ML](https://img.shields.io/badge/ML-Scikit--Learn%20%7C%20Prophet-red)
 
 ---
 
-# Technology Stack
+## Overview
 
-## Backend
+ForecastNova Enterprise is a full-stack AI-powered demand forecasting and business intelligence platform designed to help organizations analyze historical business data, generate accurate forecasts, optimize inventory planning, automate workflows, and support strategic decision-making.
 
-* FastAPI
-* Python 3.12
-* SQLAlchemy ORM
-* JWT Authentication
-* bcrypt Password Hashing
+The platform combines machine learning, business intelligence, workflow automation, governance management, KPI monitoring, and collaboration tools into a single enterprise solution.
 
-## Frontend
-
-* React 18
-* Vite
-* Tailwind CSS
-* Recharts
-* Axios
-
-## Database
-
-* MySQL 8.0
-
-## Machine Learning
-
-* Scikit-learn
-* Prophet
-* Pandas
-* NumPy
+ForecastNova v6.0 introduces enterprise-grade capabilities including multi-organization management, approval workflows, workflow automation, KPI management, governance controls, data quality monitoring, and strategic target tracking.
 
 ---
 
-# System Modules
+## Key Features
 
-## Authentication Module
+### Demand Forecasting
 
-* User registration
-* Secure login
-* JWT token authentication
-* Profile management
-
-## Dataset Management
-
-* Upload CSV datasets
-* Preview and validate datasets
-* Dataset history management
-
-## Forecasting Engine
-
-* Linear Regression
-* Ridge Regression
-* Ensemble Forecasting
-* Prophet Forecasting
-
-## AI Intelligence
-
-* Inventory recommendations
-* Demand spike prediction
-* EOQ analysis
-* Smart business insights
-
-## Analytics Dashboard
-
-* Revenue analytics
-* Regional analytics
-* Product-level insights
+* Multi-model forecasting engine
+* Automated model comparison
+* Ensemble forecasting
+* Forecast version control
+* Forecast lifecycle tracking
 * Forecast accuracy monitoring
 
-## Collaboration Workspace
+### Business Intelligence
 
+* Executive dashboards
+* Revenue trend analysis
+* Product performance analytics
+* Regional sales intelligence
+* Forecast performance metrics
+* Strategic target monitoring
+
+### AI Intelligence
+
+* Demand opportunity detection
+* Revenue risk prediction
+* Inventory optimization
+* Demand spike detection
+* Customer behavior analysis
+* Automated business insights
+
+### Collaboration
+
+* Forecast workspaces
+* Team discussions
+* Revision history
 * Shared forecasting projects
-* Team comments and revisions
-* Forecast activity tracking
+* Activity tracking
+* Approval collaboration
 
-## Scenario Analysis
+### Enterprise Governance
 
-* What-if forecasting simulations
-* Business variable adjustments
-* Revenue impact prediction
-
-## Reporting System
-
-* PDF report generation
-* Excel export
-* Forecast summaries
-* Executive reports
+* Forecast approval workflow
+* Governance lifecycle management
+* Data quality scoring
+* Audit trail tracking
+* KPI management
+* Organization announcements
 
 ---
 
-# Project Structure
+## Technology Stack
 
-```bash
-# ForecastNova Phase 6/
+| Layer            | Technology            |
+| ---------------- | --------------------- |
+| Backend          | FastAPI (Python 3.12) |
+| Frontend         | React 18 + Vite       |
+| Database         | MySQL 8.0             |
+| ORM              | SQLAlchemy            |
+| Authentication   | JWT + Bcrypt          |
+| Machine Learning | Scikit-Learn, Prophet |
+| Charts           | Recharts              |
+| Styling          | Tailwind CSS          |
+| HTTP Client      | Axios                 |
+
+---
+
+## System Architecture
+
+```text
+                    React Frontend
+                           │
+                           ▼
+                    FastAPI Backend
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+
+ Forecast Engine    AI Insights Engine   Analytics Engine
+
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           ▼
+
+                    MySQL Database
+```
+
+---
+
+## Project Structure
+
+```text
+ForecastNova/
 │
 ├── backend/
-│   ├── routes/
+│   ├── api/
 │   ├── models/
+│   ├── schemas/
 │   ├── services/
-│   ├── ml/
-│   ├── database/
+│   ├── utils/
+│   ├── uploads/
+│   ├── migrations/
 │   └── main.py
 │
 ├── frontend/
 │   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   └── App.jsx
+│   │   ├── pages/
+│   │   ├── components/
+│   │   ├── layouts/
+│   │   ├── contexts/
+│   │   ├── services/
+│   │   └── assets/
 │
-├── uploads/
-├── datasets/
-├── README.md
-└── requirements.txt
+├── docs/
+├── screenshots/
+├── requirements.txt
+├── package.json
+└── README.md
 ```
 
 ---
 
-# Installation Guide
+## Development Roadmap
 
-## Prerequisites
+### Phase 1
 
-Ensure the following software is installed:
+* User Authentication
+* Role-Based Access Control
+* Dataset Upload
+* Basic Forecasting
 
-* Python 3.12
-* Node.js 18+
-* MySQL Server
-* Git
+### Phase 2
+
+* Admin Management
+* Notifications
+* Forecast History
+* Enhanced Analytics
+
+### Phase 3
+
+* Anomaly Detection
+* Ensemble Forecasting
+* Regional Analytics
+* Advanced Reporting
+
+### Phase 4
+
+* Forecast Automation
+* Alert Management
+* ERP Integrations
+* AI Inventory Features
+
+### Phase 5
+
+* Forecast Workspaces
+* What-If Scenario Analysis
+* Executive BI Dashboard
+* AI Insights Engine
+* Collaboration Center
+* Forecast Accuracy Management
+
+### Phase 6
+
+* Multi-Organization Management
+* Approval Workflow Engine
+* Workflow Automation
+* KPI Management
+* Strategic Targets
+* Governance Center
+* Data Quality Scoring
+* Organization Announcements
 
 ---
 
-# Clone Repository
+## Core Modules
+
+### Authentication & Security
+
+* JWT Authentication
+* Password Hashing
+* Role-Based Access Control
+* Protected APIs
+* Rate Limiting
+* Audit Logging
+
+### Dataset Management
+
+* CSV Upload
+* Excel Upload
+* Dataset Validation
+* Data Cleaning
+* Dataset Processing
+
+### Forecasting Engine
+
+* Linear Regression
+* Ridge Regression
+* Random Forest
+* Gradient Boosting
+* Prophet
+* Ensemble Forecasting
+
+### Analytics
+
+* Revenue Analytics
+* Product Analytics
+* Regional Analytics
+* Forecast Performance Metrics
+* Executive KPIs
+
+### AI Features
+
+* Demand Opportunity Detection
+* Revenue Risk Prediction
+* Inventory Optimization
+* Low Stock Prediction
+* Customer Behavior Analysis
+
+### Collaboration
+
+* Forecast Projects
+* Team Discussions
+* Revision Tracking
+* Shared Workspaces
+* Activity Monitoring
+
+### Enterprise Features
+
+* Organization Management
+* Approval Workflow
+* Workflow Automation
+* KPI Tracking
+* Governance Management
+* Data Quality Reporting
+
+---
+
+## Machine Learning Models
+
+| Model             | Purpose                    |
+| ----------------- | -------------------------- |
+| Linear Regression | Baseline Forecasting       |
+| Ridge Regression  | Regularized Forecasting    |
+| Random Forest     | Non-Linear Forecasting     |
+| Gradient Boosting | High Accuracy Forecasting  |
+| Prophet           | Time-Series Forecasting    |
+| Ensemble          | Combined Model Forecasting |
+
+### Ensemble Forecasting Strategy
+
+The Ensemble Engine executes multiple forecasting models, evaluates performance using R² scores, and generates weighted predictions based on the best-performing models.
+
+---
+
+## Installation Guide
+
+### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/# ForecastNova Phase 6.git
+git clone https://github.com/your-username/ForecastNova.git
 
-cd # ForecastNova Phase 6
+cd ForecastNova
 ```
 
----
-
-# Backend Setup
+### Backend Setup
 
 ```bash
 cd backend
 
 python -m venv venv
-```
 
-### Windows
-
-```bash
 venv\Scripts\activate
-```
 
-### Install Dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
----
-
-# Frontend Setup
-
-```bash
-cd frontend
-
-npm install
-```
-
----
-
-# Database Configuration
-
-Create a MySQL database:
-
-```sql
-CREATE DATABASE # ForecastNova Phase 6;
-```
-
-Update database credentials inside:
-
-```bash
-backend/config.py
-```
-
-Example:
-
-```python
-DATABASE_URL = "mysql+pymysql://root:password@localhost/# ForecastNova Phase 6"
-```
-
----
-
-# Running the Application
-
-## Start Backend
-
-```bash
-cd backend
-
-venv\Scripts\activate
 
 uvicorn main:app --reload
 ```
 
 Backend URL:
 
-```bash
-http://127.0.0.1:8000
+```text
+http://localhost:8000
 ```
 
-Swagger API Documentation:
-
-```bash
-http://127.0.0.1:8000/docs
-```
-
----
-
-## Start Frontend
+### Frontend Setup
 
 ```bash
 cd frontend
+
+npm install
 
 npm run dev
 ```
 
 Frontend URL:
 
-```bash
+```text
 http://localhost:3000
 ```
 
 ---
 
-# API Modules
+## API Documentation
 
-| Module         | Endpoint             |
-| -------------- | -------------------- |
-| Authentication | `/api/auth`          |
-| Datasets       | `/api/datasets`      |
-| Forecasting    | `/api/forecasts`     |
-| Dashboard      | `/api/dashboard`     |
-| Analytics      | `/api/analytics`     |
-| Reports        | `/api/reports`       |
-| Monitoring     | `/api/monitoring`    |
-| AI Features    | `/api/ai`            |
-| Schedules      | `/api/schedules`     |
-| Collaboration  | `/api/collaboration` |
-| Alerts         | `/api/alerts`        |
-| Integrations   | `/api/integrations`  |
+Swagger Documentation:
 
----
+```text
+http://localhost:8000/docs
+```
 
-# Security Features
+### Authentication in Swagger
 
-* JWT Authentication
-* Password Hashing
-* Role-Based Access
-* Protected API Endpoints
-* Secure File Upload Validation
+1. Login using `/api/auth/login`
+2. Copy the access token
+3. Click Authorize
+4. Enter:
+
+```text
+Bearer YOUR_TOKEN
+```
+
+5. Execute APIs
 
 ---
 
-# Future Enhancements
+## Important API Endpoints
 
-* Deep Learning Forecast Models
-* Real-time Streaming Forecasts
-* ERP Integration
+### Authentication
+
+```text
+POST   /api/auth/register
+POST   /api/auth/login
+GET    /api/auth/me
+```
+
+### Datasets
+
+```text
+POST   /api/datasets/upload
+GET    /api/datasets
+GET    /api/datasets/{id}
+```
+
+### Forecasting
+
+```text
+POST   /api/forecasts
+GET    /api/forecasts
+POST   /api/forecasts/compare
+```
+
+### Analytics
+
+```text
+GET    /api/dashboard/stats
+GET    /api/analytics
+GET    /api/analytics/ai-insights
+```
+
+### Enterprise
+
+```text
+GET    /api/organizations
+POST   /api/approvals/submit
+POST   /api/approvals/{id}/review
+POST   /api/workflows/{id}/run
+GET    /api/kpis
+POST   /api/governance/data-quality/{id}
+```
+
+---
+
+## Environment Variables
+
+```env
+DATABASE_URL=mysql+pymysql://root:password@localhost:3306/demand_forecasting
+
+SECRET_KEY=your-secret-key
+
+UPLOAD_DIR=uploads
+
+SMTP_HOST=smtp.gmail.com
+
+SMTP_PORT=587
+
+SMTP_USER=alerts@company.com
+
+SMTP_PASSWORD=your-app-password
+
+RATE_LIMIT_ENABLED=true
+```
+
+---
+
+## Enterprise KPIs
+
+* Forecast Accuracy
+* Revenue Growth
+* Inventory Turnover
+* Demand Variance
+* Forecast Bias
+* Stock-Out Rate
+* Fill Rate
+* Profit Margin
+* Strategic Goal Achievement
+
+---
+
+## Screenshots
+
+Add project screenshots inside the `screenshots` folder.
+
+```text
+screenshots/
+├── dashboard.png
+├── executive-bi-dashboard.png
+├── governance-center.png
+├── approval-workflow.png
+├── kpi-management.png
+├── organization-management.png
+```
+
+---
+
+## Future Enhancements (Phase 7)
+
+* AI Copilot
+* Generative AI Reporting
+* Real-Time Streaming Analytics
+* MLOps Monitoring
 * Cloud Deployment
 * Mobile Application
-* Advanced Business Intelligence Reports
+* Predictive Supply Chain Optimization
+* Conversational Forecast Assistant
 
 ---
-
