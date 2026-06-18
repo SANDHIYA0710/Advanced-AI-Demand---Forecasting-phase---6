@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
 from datetime import datetime
 
@@ -16,16 +16,19 @@ class UserLogin(BaseModel):
 
 
 class UserResponse(BaseModel):
-    id: int
-    username: str
-    email: str
-    full_name: Optional[str] = None
-    is_active: bool
-    is_admin: bool = False
-    role: Optional[str] = "analyst"
-    created_at: datetime
-    model_config = {"from_attributes": True}
+    id: int = Field(example=1)
+    username: str = Field(example="sandhiya")
+    email: str = Field(example="sandhiya@gmail.com")
+    full_name: Optional[str] = Field(example="Sandhiya K")
 
+    is_active: bool = Field(example=True)
+    is_admin: bool = Field(example=True)
+
+    role: str = Field(example="super_admin")
+
+    created_at: datetime
+
+    model_config = {"from_attributes": True}
 
 class Token(BaseModel):
     access_token: str

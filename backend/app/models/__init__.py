@@ -15,6 +15,11 @@ from app.models.project import ForecastProject, ProjectMember, ProjectActivity
 from app.models.scenario import ForecastScenario
 from app.models.collaboration import ForecastComment, ForecastRevision, SharedReport
 from app.models.dataset_version import DatasetVersion, ExecutiveReport
+from app.models.organization import Organization, OrgMember
+from app.models.approval import ForecastApproval, ApprovalHistory
+from app.models.workflow import Workflow, WorkflowLog
+from app.models.kpi import KPI, StrategicTarget
+from app.models.governance import ForecastGovernance, DataQualityReport, Announcement
 
 __all__ = [
     "User", "Dataset", "Forecast", "Notification", "ModelComparison",
@@ -24,4 +29,9 @@ __all__ = [
     "ForecastProject", "ProjectMember", "ProjectActivity",
     "ForecastScenario", "ForecastComment", "ForecastRevision", "SharedReport",
     "DatasetVersion", "ExecutiveReport",
+    "Organization", "OrgMember",
+    "ForecastApproval", "ApprovalHistory",
+    "Workflow", "WorkflowLog",
+    "KPI", "StrategicTarget",
+    "ForecastGovernance", "DataQualityReport", "Announcement",
 ]

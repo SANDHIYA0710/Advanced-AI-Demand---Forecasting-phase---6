@@ -24,14 +24,19 @@ import CollaborationPage from "./pages/CollaborationPage";
 import ExecutiveDashboard from "./pages/ExecutiveDashboard";
 import AIInsightsPage from "./pages/AIInsightsPage";
 import AccuracyCenterPage from "./pages/AccuracyCenterPage";
+import OrganizationsPage from "./pages/OrganizationsPage";
+import ApprovalsPage from "./pages/ApprovalsPage";
+import WorkflowsPage from "./pages/WorkflowsPage";
+import KPIsPage from "./pages/KPIsPage";
+import GovernancePage from "./pages/GovernancePage";
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center" style={{ background:"var(--bg)" }}>
       <div className="flex flex-col items-center gap-3">
-        <div className="w-10 h-10 border-4 border-orange-200 border-t-primary-600 rounded-full animate-spin" />
-        <p className="text-orange-600 font-medium text-sm">Loading…</p>
+        <div className="w-10 h-10 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin" />
+        <p className="text-primary-600 font-medium text-sm">Loading ForecastIQ…</p>
       </div>
     </div>
   );
@@ -55,9 +60,9 @@ export default function App() {
       <AuthProvider>
         <BrowserRouter>
           <Toaster position="top-right" toastOptions={{
-            style: { background:"#f0fdf4", border:"1px solid #fed7aa", color:"#ea580c", fontFamily:"'DM Sans',sans-serif", fontSize:"14px" },
-            success: { iconTheme: { primary:"#f97316", secondary:"#f0fdf4" } },
-            error: { style: { borderColor:"#fecaca", color:"#b91c1c", background:"#fef2f2" } },
+            style:{ background:"#f0fdf4", border:"1px solid #bbf7d0", color:"#166534", fontFamily:"'DM Sans',sans-serif", fontSize:"14px" },
+            success:{ iconTheme:{ primary:"#22c55e", secondary:"#f0fdf4" } },
+            error:{ style:{ borderColor:"#fecaca", color:"#b91c1c", background:"#fef2f2" } },
           }} />
           <Routes>
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
@@ -67,26 +72,31 @@ export default function App() {
               <ProtectedRoute>
                 <Layout>
                   <Routes>
-                    <Route path="/dashboard" element={<DashboardPage />} />
-                    <Route path="/executive" element={<ExecutiveDashboard />} />
-                    <Route path="/datasets" element={<DatasetPage />} />
-                    <Route path="/forecast" element={<ForecastPage />} />
-                    <Route path="/analytics" element={<AnalyticsPage />} />
-                    <Route path="/anomalies" element={<AnomalyPage />} />
-                    <Route path="/reports" element={<ReportsPage />} />
-                    <Route path="/ai-features" element={<AIFeaturesPage />} />
-                    <Route path="/ai-insights" element={<AIInsightsPage />} />
-                    <Route path="/accuracy" element={<AccuracyCenterPage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                    <Route path="/scenarios" element={<ScenarioPage />} />
+                    <Route path="/dashboard"     element={<DashboardPage />} />
+                    <Route path="/executive"     element={<ExecutiveDashboard />} />
+                    <Route path="/datasets"      element={<DatasetPage />} />
+                    <Route path="/forecast"      element={<ForecastPage />} />
+                    <Route path="/analytics"     element={<AnalyticsPage />} />
+                    <Route path="/anomalies"     element={<AnomalyPage />} />
+                    <Route path="/reports"       element={<ReportsPage />} />
+                    <Route path="/ai-features"   element={<AIFeaturesPage />} />
+                    <Route path="/ai-insights"   element={<AIInsightsPage />} />
+                    <Route path="/accuracy"      element={<AccuracyCenterPage />} />
+                    <Route path="/projects"      element={<ProjectsPage />} />
+                    <Route path="/scenarios"     element={<ScenarioPage />} />
                     <Route path="/collaboration" element={<CollaborationPage />} />
-                    <Route path="/schedules" element={<SchedulePage />} />
-                    <Route path="/alerts" element={<AlertsPage />} />
-                    <Route path="/integrations" element={<IntegrationsPage />} />
-                    <Route path="/monitoring" element={<MonitoringPage />} />
-                    <Route path="/profile" element={<ProfilePage />} />
-                    <Route path="/admin" element={<AdminRoute><AdminPage /></AdminRoute>} />
-                    <Route path="*" element={<Navigate to="/dashboard" replace />} />
+                    <Route path="/schedules"     element={<SchedulePage />} />
+                    <Route path="/alerts"        element={<AlertsPage />} />
+                    <Route path="/integrations"  element={<IntegrationsPage />} />
+                    <Route path="/monitoring"    element={<MonitoringPage />} />
+                    <Route path="/profile"       element={<ProfilePage />} />
+                    <Route path="/organizations" element={<OrganizationsPage />} />
+                    <Route path="/approvals"     element={<ApprovalsPage />} />
+                    <Route path="/workflows"     element={<WorkflowsPage />} />
+                    <Route path="/kpis"          element={<KPIsPage />} />
+                    <Route path="/governance"    element={<GovernancePage />} />
+                    <Route path="/admin"         element={<AdminRoute><AdminPage /></AdminRoute>} />
+                    <Route path="*"              element={<Navigate to="/dashboard" replace />} />
                   </Routes>
                 </Layout>
               </ProtectedRoute>
