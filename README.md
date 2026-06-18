@@ -1,10 +1,10 @@
-# ForecastNova
+# # ForecastNova Phase 6
 
 Enterprise AI-Based Demand Forecasting and Business Intelligence Platform
 
 ## Introduction
 
-ForecastNova is a modern full-stack demand forecasting platform designed for enterprises to analyze historical sales data, generate predictive insights, monitor anomalies, and automate forecasting workflows.
+# ForecastNova Phase 6 is a modern full-stack demand forecasting platform designed for enterprises to analyze historical sales data, generate predictive insights, monitor anomalies, and automate forecasting workflows.
 
 The platform combines machine learning models, advanced analytics, real-time dashboards, and intelligent automation to help organizations improve inventory planning, optimize operations, and support data-driven decision making.
 
@@ -117,7 +117,7 @@ The platform combines machine learning models, advanced analytics, real-time das
 # Project Structure
 
 ```bash
-ForecastNova/
+# ForecastNova Phase 6/
 │
 ├── backend/
 │   ├── routes/
@@ -158,9 +158,9 @@ Ensure the following software is installed:
 # Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ForecastNova.git
+git clone https://github.com/YOUR_USERNAME/# ForecastNova Phase 6.git
 
-cd ForecastNova
+cd # ForecastNova Phase 6
 ```
 
 ---
@@ -202,7 +202,7 @@ npm install
 Create a MySQL database:
 
 ```sql
-CREATE DATABASE forecastnova;
+CREATE DATABASE # ForecastNova Phase 6;
 ```
 
 Update database credentials inside:
@@ -214,7 +214,7 @@ backend/config.py
 Example:
 
 ```python
-DATABASE_URL = "mysql+pymysql://root:password@localhost/forecastnova"
+DATABASE_URL = "mysql+pymysql://root:password@localhost/# ForecastNova Phase 6"
 ```
 
 ---
